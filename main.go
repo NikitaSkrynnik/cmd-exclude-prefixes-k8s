@@ -46,7 +46,7 @@ func main() {
 	ctx, cancel := signal.NotifyContext(
 		context.Background(),
 		os.Interrupt,
-		// More Linux signal s here
+		// More Linux signals here
 		syscall.SIGHUP,
 		syscall.SIGTERM,
 		syscall.SIGQUIT,

@@ -35,6 +35,7 @@ jobs:
   excludereplace:
     uses: networkservicemesh/.github/.github/workflows/exclude-replace.yaml@main
 
+
   docker-build-and-test:
     if: github.repository != 'networkservicemesh/cmd-template'
     uses: NikitaSkrynnik/.github/.github/workflows/docker-build-and-test.yaml@test-docker
