@@ -39,4 +39,4 @@ jobs:
     if: github.repository != 'networkservicemesh/cmd-template'
     uses: NikitaSkrynnik/.github/.github/workflows/docker-build-and-test.yaml@test-docker
     secrets:
-      token: ${{ github.token }}
+      token: ${{ secrets.GITHUB_TOKEN }}
