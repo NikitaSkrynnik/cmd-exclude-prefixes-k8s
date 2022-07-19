@@ -37,6 +37,6 @@ jobs:
 
   docker-build-and-test:
     if: github.repository != 'networkservicemesh/cmd-template'
-    uses: networkservicemesh/.github/.github/workflows/docker-build-and-test.yaml@main
+    uses: NikitaSkrynnik/.github/.github/workflows/docker-build-and-test.yaml@test-docker
     secrets:
       token: ${{ github.token }}
