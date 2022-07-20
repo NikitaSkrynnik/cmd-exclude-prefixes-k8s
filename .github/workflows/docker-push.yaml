@@ -4,15 +4,11 @@ on:
   push:
     branches:
       - main
-  workflow_run:
-    types:
-      - completed
-    workflows:
-      - 'automerge'
+  pull_request:
 jobs:
   push:
     if: ${{ github.repository != 'networkservicemesh/cmd-template' && (github.event.workflow_run.conclusion == 'success' && github.actor == 'nsmbot' || github.event_name == 'push') }}
-    uses: networkservicemesh/.github/.github/workflows/docker-push.yaml@main
+    uses: NikitaSkrynnik/.github/.github/workflows/docker-push.yaml@test-docker-push
     secrets:
       docker-login: ${{ secrets.DOCKER_LOGIN }}
       docker-password: ${{ secrets.DOCKER_PASSWORD }}
